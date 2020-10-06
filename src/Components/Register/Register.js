@@ -11,7 +11,7 @@ const Register = () => {
     console.log(form);
     const handleFormSubmit=(event)=>{
         event.preventDefault()
-        fetch('https://limitless-anchorage-18267.herokuapp.com/submitForm',{
+        fetch('http://localhost:5000/submitForm',{
             method:'POST', 
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(form)

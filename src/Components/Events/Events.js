@@ -7,7 +7,7 @@ const Events = () => {
     const [events, setEvents]=useState([]);
     console.log(events);
     useEffect(()=>{
-        fetch('https://limitless-anchorage-18267.herokuapp.com/addedEvent',{
+        fetch('http://localhost:5000/addedEvent',{
             method:'GET', 
             headers:{
                 'Content-Type':'application/json',
@@ -21,7 +21,7 @@ const Events = () => {
     })
 
     const handleCancel=(id)=>{
-        fetch('https://limitless-anchorage-18267.herokuapp.com/cancelEvent',{
+        fetch('http://localhost:5000/cancelEvent',{
             method:'DELETE',
             headers:{
                 'Content-Type':'application/json',

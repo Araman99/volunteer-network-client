@@ -7,7 +7,7 @@ import VolunteerTask from '../VolunteerTask/VolunteerTask';
 const Home = () => {
     const [task, setTask]=useState([])
     useEffect(()=>{
-        fetch('https://limitless-anchorage-18267.herokuapp.com/task')
+        fetch('http://localhost:5000/task')
         .then(res=>res.json())
         .then(result=>{
         setTask(result)

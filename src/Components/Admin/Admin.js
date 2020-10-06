@@ -8,14 +8,14 @@ const Admin = () => {
     
     useEffect(()=>{
         
-            fetch('https://limitless-anchorage-18267.herokuapp.com/allRegisteredEvent')
+            fetch('http://localhost:5000/allRegisteredEvent')
             .then(res=>res.json())
             .then(result=>setAllEvents(result))
        
     },[])
 
     const eventDeleteHandler=(id)=>{
-        fetch('https://limitless-anchorage-18267.herokuapp.com/deleteEvent',{
+        fetch('http://localhost:5000/deleteEvent',{
             method:'DELETE',
             headers:{
                 'Content-Type':'application/json',
